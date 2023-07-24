@@ -7,6 +7,10 @@ from Megalodon.models import OpenAILanguageModel, HuggingFaceLLM
 
 class Megalodon:
     def __init__(self, model_id: str, api_key: str = None, dataset: str = None, prompt: str = None):
+        self.api_key = api_key
+
+        api_key = api_key or os.getenv("OPENAI_API_KEY") 
+
         self.dataset = load_dataset(dataset) if dataset else None
         self.prompt = prompt if prompt else "This text: {text} was upvoted/downvoted. Explain why in a simple, comprehensive manner."
         
@@ -48,6 +52,8 @@ class Megalodon:
 # TODO: Save to huggingface after each iteration is labelled
 # TODO: Potentially use parquet for optimized storage
 # TODO: Add in polymorphic or shape shifting preprocesing logi 
+
+
 # # Using OpenAI model
 # megalodon = Megalodon(model_id="gpt-3", api_key="your-api-key", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
 # explanations = megalodon.run()
