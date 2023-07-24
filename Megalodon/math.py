@@ -48,3 +48,12 @@ class Megalodon:
 # TODO: Save to huggingface after each iteration is labelled
 # TODO: Potentially use parquet for optimized storage
 # TODO: Add in polymorphic or shape shifting preprocesing logi 
+# Using OpenAI model
+megalodon = Megalodon(model_id="gpt-3", api_key="your-api-key", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
+explanations = megalodon.run()
+megalodon.save_to_huggingface(explanations, 'hf_output_dir')
+
+# Using Hugging Face model
+megalodon = Megalodon(model_id="gpt2", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
+explanations = megalodon.run()
+megalodon.save_to_huggingface(explanations, 'hf_output_dir')

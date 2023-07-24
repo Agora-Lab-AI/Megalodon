@@ -16,7 +16,7 @@ Dataset Sample (Row by Row) [Input] --(Feeds into)--> [Model] --(Outputs)--> Dat
 
 # Deck Logs (Changelog)
 
-- **v2.0.0 - The Leviathan Update** - We've surfaced some serious computational power in this one!
+- **v2.0.0 - The Leviathan Update** - We've surfaced some serious computational power in this one! Modular integration of HuggingFace and OpenAI models.
 - **v1.5.0 - The Kraken Patch** - Tightened up the tentacles of the code. Fewer bugs will be slipping through!
 - **v1.0.0 - Maiden Voyage** - Initial launch! The Megalodon sets sail!
 
@@ -37,22 +37,26 @@ pip install -r requirements.txt
 ```python
 from megalodon import Megalodon
 
-mega = Megalodon()
+# Using OpenAI model
+megalodon = Megalodon(model_id="gpt-3", api_key="your-api-key", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
 
-mega.load_data('your_dataset.csv')
+# Using Hugging Face model
+megalodon = Megalodon(model_id="gpt2", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
 ```
 
-2. **Plot your course.** (Design your model)
+2. **Set sail!** (Generate explanations)
 
 ```python
-mega.build_model('model_design.yaml')
+explanations = megalodon.run()
 ```
 
-3. **Set sail!** (Train your model)
+3. **Return to port.** (Save your results)
 
 ```python
-mega.train()
+megalodon.save_to_huggingface(explanations, 'hf_output_dir')
 ```
+
+Please replace `"your-api-key"` with your actual OpenAI API key, and `'hf_output_dir'` with your desired output directory for the Hugging Face datasets.
 
 # Lifeboats (Support)
 
@@ -76,10 +80,7 @@ The Megalodon Team
 # Todo:
 
 * Better prompt
-
-* better model handling, we should be able to input any model from openai or huggingface
-
-TODO: Make it modular to plug in and play with any model openai or huggingface
-TODO: Save to huggingface after each iteration is labelled
-TODO: Potentially use parquet for optimized storage
-TODO: Add in polymorphic or shape shifting preprocesing logi 
+* More seamless model handling, plug and play with any model from OpenAI or HuggingFace.
+* Save to HuggingFace after each iteration is labeled
+* Potentially use Parquet for optimized storage
+* Add in polymorphic or shape shifting preprocessing logic
