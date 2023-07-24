@@ -70,3 +70,12 @@ Thank you for choosing to sail with Megalodon. May fair winds and calm seas guid
 Happy Sailing!
 
 The Megalodon Team
+
+
+
+# Todo:
+
+* Better prompt
+
+* better model handling, we should be able to input any model from openai or huggingface
+
