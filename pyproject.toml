@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "Megalodon"
+name = "Megaladon"
 version = "0.0.1"
-description = "Megalodon - Pytorch"
+description = "Megaladon - Pytorch"
 authors = ["Kye Gomez <kye@apac.ai>"]
 license = "MIT"
 readme = "README.md"  # assuming you have a README.md file
-homepage = "https://github.com/Agora-X/Megalodon"
+homepage = "https://github.com/Agora-X/Megaladon"
 keywords = ["artificial intelligence", "attention mechanism", "transformers"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -15,7 +15,7 @@ classifiers = [
     "Programming Language :: Python :: 3.6",
 ]
 
-include = ["megalodon/**/*"]
+include = ["Megaladon/**/*"]
 
 [tool.poetry.dependencies]
 python = "^3.6"

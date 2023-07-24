@@ -1,11 +1,10 @@
 import os
 from datasets import load_dataset
-import openai
 from datasets import load_dataset, DatasetDict, Dataset
 
-from Megalodon.models import OpenAILanguageModel, HuggingFaceLLM
+from Megaladon.models import OpenAILanguageModel, HuggingFaceLLM
 
-class Megalodon:
+class Megaladon:
     def __init__(self, model_id: str, api_key: str = None, dataset: str = None, prompt: str = None):
         self.api_key = api_key
 
@@ -55,11 +54,11 @@ class Megalodon:
 
 
 # # Using OpenAI model
-# megalodon = Megalodon(model_id="gpt-3", api_key="your-api-key", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
-# explanations = megalodon.run()
-# megalodon.save_to_huggingface(explanations, 'hf_output_dir')
+# Megaladon = Megaladon(model_id="gpt-3", api_key="your-api-key", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
+# explanations = Megaladon.run()
+# Megaladon.save_to_huggingface(explanations, 'hf_output_dir')
 
 # # Using Hugging Face model
-# megalodon = Megalodon(model_id="gpt2", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
-# explanations = megalodon.run()
-# megalodon.save_to_huggingface(explanations, 'hf_output_dir')
+# Megaladon = Megaladon(model_id="gpt2", dataset="flax-sentence-embeddings/stackexchange_math_jsonl")
+# explanations = Megaladon.run()
+# Megaladon.save_to_huggingface(explanations, 'hf_output_dir')
