@@ -1,4 +1,3 @@
-###########
 # Megalodon
 Sail the Seas of Data and Dive into the Depths of Computation!  
 ![Megalodon](megaladon.jpeg)
