@@ -84,3 +84,5 @@ The Megaladon Team
 * Save to HuggingFace after each iteration is labeled
 * Potentially use Parquet for optimized storage
 * Add in polymorphic or shape shifting preprocessing logic
+* [Math Model](https://huggingface.co/datasets/flax-sentence-embeddings/stackexchange_math_jsonl)
+* [Code dataset](https://huggingface.co/datasets/DONG19/instruct_code_search_net)
