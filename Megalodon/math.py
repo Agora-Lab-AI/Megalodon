@@ -1,5 +1,6 @@
-from transformers import AutoTokenizer
+from datasets import load_dataset
 
+dataset = load_dataset("flax-sentence-embeddings/stackexchange_math_jsonl")
 
 def prep_sample(sample):
     question = sample["question"]
