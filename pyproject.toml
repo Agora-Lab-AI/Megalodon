@@ -32,5 +32,3 @@ name = "pypi"
 url = "https://pypi.org/simple/"
 secondary = true
 
-[[tool.poetry.package]]
-include = "megalodon"
