@@ -79,3 +79,7 @@ The Megalodon Team
 
 * better model handling, we should be able to input any model from openai or huggingface
 
+TODO: Make it modular to plug in and play with any model openai or huggingface
+TODO: Save to huggingface after each iteration is labelled
+TODO: Potentially use parquet for optimized storage
+TODO: Add in polymorphic or shape shifting preprocesing logi 
